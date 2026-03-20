@@ -6,7 +6,6 @@ import { FeatureSection } from "@/components/landing/FeatureSection";
 import { Footer } from "@/components/landing/Footer";
 import { Header } from "@/components/landing/Header";
 import { HeroSection } from "@/components/landing/HeroSection";
-import { ShowcaseSection } from "@/components/landing/ShowcaseSection";
 
 const landingContent = {
   brand: "Velao",
@@ -98,7 +97,6 @@ export default function Home() {
           subtitle={landingContent.hero.subtitle}
           description={landingContent.hero.description}
         />
-        <ShowcaseSection imageSrc="/images/octopus.png" imageAlt="" />
         <FeatureSection
           eyebrow={landingContent.problem.eyebrow}
           title={landingContent.problem.title}

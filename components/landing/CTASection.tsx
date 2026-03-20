@@ -65,42 +65,8 @@ export function CTASection({
               className="object-cover opacity-95 saturate-125 transition-transform duration-700 group-hover:scale-[1.03]"
               sizes="(max-width: 1024px) 80vw, 360px"
             />
+            <div className="absolute inset-0 bg-black/40" />
             <div className="absolute inset-0 bg-gradient-to-t from-[#06050f] via-transparent to-transparent" />
-
-            <svg
-              viewBox="0 0 200 200"
-              aria-hidden="true"
-              className="absolute inset-0 h-full w-full opacity-80"
-            >
-              <defs>
-                <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0%" stopColor="#a855f7" stopOpacity="0.7" />
-                  <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.6" />
-                  <stop offset="100%" stopColor="#22d3ee" stopOpacity="0.5" />
-                </linearGradient>
-              </defs>
-              <circle
-                cx="100"
-                cy="100"
-                r="72"
-                fill="none"
-                stroke="url(#ringGrad)"
-                strokeWidth="1.5"
-                strokeDasharray="6 6"
-                opacity="0.8"
-              />
-              <circle
-                cx="100"
-                cy="100"
-                r="90"
-                fill="none"
-                stroke="url(#ringGrad)"
-                strokeWidth="1"
-                strokeDasharray="2 6"
-                opacity="0.55"
-              />
-            </svg>
-
             <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.06),transparent_25%,transparent_75%,rgba(255,255,255,0.04))] opacity-70 mix-blend-overlay" />
           </div>
         </Reveal>

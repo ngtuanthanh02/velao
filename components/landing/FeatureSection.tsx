@@ -44,7 +44,7 @@ export function FeatureSection({
 
             <div className="absolute inset-0">
               <Image
-                src="/images/nervous.png"
+                src="/images/myphone.png"
                 alt=""
                 fill
                 aria-hidden="true"
@@ -55,12 +55,13 @@ export function FeatureSection({
 
             <div className="absolute inset-0">
               <Image
-                src="/images/nervous.png"
+                src="/images/myphone.png"
                 alt=""
                 fill
                 className="object-cover opacity-90 saturate-125"
                 sizes="(max-width: 1024px) 80vw, 360px"
               />
+              <div className="absolute inset-0 bg-black/40" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#06050f] via-black/10 to-transparent" />
               <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.08),transparent_18%,transparent_82%,rgba(255,255,255,0.06))] opacity-50 mix-blend-overlay" />
             </div>
