@@ -11,6 +11,7 @@ export function Header({ brand }: HeaderProps) {
     { label: "EVOLUTION OF CERTAINTY", href: "#evolution" },
     { label: "ECOSYSTEM", href: "#ecosystem" },
     { label: "WORKSTATION", href: "#workstation" },
+    { label: "CONTACT", href: "#contact" },
   ];
 
   return (
