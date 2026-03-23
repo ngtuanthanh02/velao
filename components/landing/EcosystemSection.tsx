@@ -54,7 +54,7 @@ export function EcosystemSection({
 
             <div className="absolute inset-0">
               <Image
-                src="/images/key.png"
+                src="/images/lock.png"
                 alt=""
                 fill
                 aria-hidden="true"
@@ -65,7 +65,7 @@ export function EcosystemSection({
 
             <div className="absolute inset-0">
               <Image
-                src="/images/key.png"
+                src="/images/lock.png"
                 alt=""
                 fill
                 className="object-cover opacity-95 saturate-125"

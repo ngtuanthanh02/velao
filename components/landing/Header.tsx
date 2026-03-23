@@ -1,11 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import type { MouseEvent } from "react";
 
 type HeaderProps = {
   brand: string;
 };
 
 export function Header({ brand }: HeaderProps) {
+  const scrollToSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+
+    const targetId = href.replace("#", "");
+    const element = document.getElementById(targetId);
+    if (!element) return;
+
+    const headerOffset = 80;
+    const y = element.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  };
+
   const navItems = [
     { label: "PROBLEM", href: "#problem" },
     { label: "EVOLUTION OF CERTAINTY", href: "#evolution" },
@@ -41,6 +60,7 @@ export function Header({ brand }: HeaderProps) {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={scrollToSection(item.href)}
                 className="text-[11px] tracking-[0.12em] text-white/70 uppercase transition-colors hover:text-white"
               >
                 {item.label}

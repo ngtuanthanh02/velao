@@ -2,7 +2,7 @@ import { LoginCard } from "@/components/auth/LoginCard";
 
 export default function LoginPage() {
   return (
-    <div className="relative h-screen overflow-hidden bg-[#04030b] text-white">
+    <div className="relative h-dvh w-full overflow-hidden overscroll-none bg-[#04030b] text-white">
       <div className="pointer-events-none absolute -top-32 left-1/2 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-blue-500/25 blur-[120px]" />
       <div className="pointer-events-none absolute top-[30rem] -left-32 h-[28rem] w-[28rem] rounded-full bg-fuchsia-600/20 blur-[120px]" />
       <div className="pointer-events-none absolute top-[72rem] right-0 h-[28rem] w-[30rem] rounded-full bg-violet-500/20 blur-[120px]" />

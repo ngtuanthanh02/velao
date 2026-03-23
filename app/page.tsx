@@ -52,7 +52,7 @@ incapable of deviating from your intent.`,
       `Zero-Waste Performance. We have removed the middleman from the machine. No more
 delays; just direct, instant execution.`,
       `Actuarial Certainty. The first technical standard that makes digital acts Insurable in the real
-world`,
+world.`,
     ],
   },
   ecosystem: {
@@ -79,7 +79,7 @@ single, hardware-locked operating environment.`,
   },
   footer: {
     brand: "VELAO",
-    location: "los Angles | Kharkiv",
+    location: "Los Angeles | Kharkiv",
   },
 };
 
@@ -91,7 +91,7 @@ export default function Home() {
       <div className="pointer-events-none absolute top-[72rem] right-0 h-[28rem] w-[30rem] rounded-full bg-violet-500/20 blur-[120px]" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:100%_42px] opacity-20" />
       <Header brand={landingContent.brand} />
-      <main className="relative z-10 pt-20">
+      <main className="relative z-10 flex flex-col gap-8 pt-20 sm:gap-10 lg:gap-12">
         <HeroSection
           title={landingContent.hero.title}
           subtitle={landingContent.hero.subtitle}

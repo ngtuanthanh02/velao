@@ -32,7 +32,7 @@ export function FeatureSection({
             </h2>
           </Reveal>
           <Reveal delayClassName="delay-200">
-            <p className="max-w-4xl text-base leading-relaxed font-light text-white/70 sm:text-lg">
+            <p className="max-w-4xl whitespace-pre-line text-base leading-relaxed font-light text-white/70 sm:text-lg">
               {description}
             </p>
           </Reveal>

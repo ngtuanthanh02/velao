@@ -15,8 +15,8 @@ type ContentSectionProps = {
 };
 
 export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
-  const stepImages = ["/images/key.png", "/images/nervous.png", "/images/octopus.png"];
-  const step1VideoSrc = "/videos/evolution-step1.mp4";
+  const stepImages = ["/images/key.png", "/images/key2.png", "/images/world.png"];
+  const step1VideoSrc = "/videos/KarolVideo.mov";
   const step1VideoPoster = "/images/girl.png";
 
   return (
@@ -55,7 +55,7 @@ export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
                         >
                           <source src={step1VideoSrc} type="video/mp4" />
                         </video>
-                        {/* <div className="pointer-events-none absolute inset-0 bg-black/40" /> */}
+                        <div className="pointer-events-none absolute inset-0 bg-black/40" />
                       </div>
                     ) : (
                       <div className="relative mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-2xl border border-white/12">
