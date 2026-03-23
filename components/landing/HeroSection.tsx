@@ -5,10 +5,11 @@ type HeroSectionProps = {
   title: string;
   subtitle: string;
   description: string;
+  ctaLabel?: string;
 };
 
-export function HeroSection({ title, subtitle, description }: HeroSectionProps) {
-  const titleParts = title.split("speed");
+export function HeroSection({ title, subtitle, description, ctaLabel = "Inquire" }: HeroSectionProps) {
+  const titleParts = title.split("anchored");
 
   return (
     <section
@@ -21,7 +22,7 @@ export function HeroSection({ title, subtitle, description }: HeroSectionProps) 
             <h1 className="max-w-4xl text-4xl leading-[1.05] font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
               {titleParts[0]}
               <span className="bg-gradient-to-r from-violet-400 via-fuchsia-300 to-blue-400 bg-clip-text text-transparent">
-                speed
+                anchored
               </span>
               {titleParts[1] ?? ""}
             </h1>
@@ -42,7 +43,7 @@ export function HeroSection({ title, subtitle, description }: HeroSectionProps) 
               href="#contact"
               className="inline-flex h-8 items-center justify-center rounded-full bg-gradient-to-r from-violet-400 via-fuchsia-300 to-blue-400 px-8 text-sm font-semibold tracking-[0.08em] text-black/90 transition-opacity hover:opacity-90"
             >
-              Inquire
+              {ctaLabel}
             </a>
           </Reveal>
         </div>

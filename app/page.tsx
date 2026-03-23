@@ -10,72 +10,66 @@ import { HeroSection } from "@/components/landing/HeroSection";
 const landingContent = {
   brand: "Velao",
   hero: {
-    title: "Authority, at the speed of silicon.",
+    title: "Identity, anchored in silicon.",
     subtitle: "Standard AI is a guess. Velao is a fact.",
     description:
-      'We use the physical security hardware already in your device to verify every digital act. No more "Software Permissions." No more "Bot Identity." Just hard physics.',
+      "We utilize the physical security already in your device to notarize every act of intent. We move from software permissions to hardware finality.",
+    ctaLabel: "REQUEST ACCESS TO THE SPECIFICATION",
   },
   problem: {
     eyebrow: "THE PROBLEM",
     title: "You are a guest on your own device.",
     description:
-      `Identity and capital are currently managed by "soft" permissions. Platforms can spoof your face, hallucinate your choices, and siphon your revenue because they own the environment you work in.
-The platform owns the code. They shouldn't own your intent.`
+      `Right now your identity and your capital are managed by soft permissions. Platforms can spoof your face and siphon your revenue because they own the environment you work in.
+The platform owns the code. They should not own your intent.`,
+  },
+  interlock: {
+    eyebrow: "THE INTERLOCK",
+    title: "The physics of the handshake.",
+    description:
+      `The progress made with IronClaw is a landmark in technical integrity. It provides the secure ground where world class intelligence becomes private and verifiable.
+We provide the final interlock. We utilize the physics of the handshake to anchor that world class environment to the human root. By connecting their secure ground to the silicon already in your pocket, we ensure that machine labor remains physically subordinate to your command.`,
   },
   evolution: {
-    title: "THE EVOLUTION OF CERTAINTY",
+    title: "THE EVOLUTION",
     steps: [
       {
-        name: "Step 1: Inception.",
-        status: "Status: Patented | Senior Priority Jan 16, 2026",
-        body: `We established the global standard for linking human intent to physical hardware. By binding acts of
-will to a non-exportable silicon root at the microsecond of capture, we provide the only technical
-standard for Informed Consent.`,
+        name: "2026: AUTHORIZED ATTENTION IS ALL YOU NEED.",
+        status: "2026: AUTHORIZED ATTENTION IS ALL YOU NEED.",
+        body: `In 2017 Illia Polosukhin gave machines a mind. The architecture of attention changed the world and provided the foundation for everything we see today.`,
       },
       {
-        name: "Step 2: Command.",
-        status: "Status: Patented | Feb 2026",
-        body: `We extended that protection to the automated workforce. We provide the physical interlock that ensures
-no digital action occurs without a direct pulse from your silicon. We move the agent from a risk to a
-Fiduciary.`,
+        name: "IronClaw provides the ground. It is the industrial space where intelligence becomes private and verifiable.",
+        status: "IronClaw provides the ground. It is the industrial space where intelligence becomes private and verifiable.",
+        body: `We provide the key. We anchor the mind and the ground to the physical authority of the human root. This ensures every act of the machine is a verified expression of your will.`,
       },
       {
-        name: "Step 3: Finality.",
-        status: "Status: Phase III | Restricted Access",
-        body: `Now, we are establishing the environment for global scale. Phase III introduces a synchronous
-operating state that eliminates the structural lag and waste of the old internet.`,
+        name: "",
+        status: "",
+        body: `Mind. Foundational intelligence.
+Ground. The IronClaw environment.
+Key. Your physical device.`,
       },
     ],
-    bullets: [
-      `Integrity by Default. Verification occurs at the point of action, making the machine physically
-incapable of deviating from your intent.`,
-      `Zero-Waste Performance. We have removed the middleman from the machine. No more
-delays; just direct, instant execution.`,
-      `Actuarial Certainty. The first technical standard that makes digital acts Insurable in the real
-world.`,
-    ],
+    bullets: [],
   },
   ecosystem: {
-    title: "THE ECOSYSTEM",
-    subtitle: "A new economy for professional labor.",
+    title: "THE ECONOMY",
+    subtitle: "The many hands of authority.",
     description:
-      `We provide the foundation for a global network where every digital contribution is recognized,
-protected, and rewarded.`,
+      `We have moved AI from chat to labor. Our environment allows the most advanced intelligence on earth to work as a verified fiduciary for the human subject.`,
     points: [
-      `Authenticated Value. We turn unverified data into permanent property.`,
-      `Institutional Standing. We provide the building code that satisfies the highest standards of law
-and finance.`,
-      `Sovereign Growth. A collaborative environment designed to outlast platforms, returning the
-margin to the originators.`,
+      `Integrity by Default. We verify the action at the source. The machine becomes physically incapable of deviating from your intent.`,
+      `Zero-Waste Performance. We have removed the middleman from the machine. No more delays. Just direct and instant execution.`,
+      `A Fair Marketplace. A new model for the professional class where every act of labor is recognized and rewarded by the ledger.`,
     ],
   },
   workstation: {
-    title: "THE WORKSTATION",
-    subtitle: "One cockpit for your total circle.",
-    audiences: "CREATORS | PROFESSIONALS | FAMILIES",
+    title: "THE LEGAL ANCHOR",
+    subtitle: "Senior Priority | Est. Jan 16, 2026",
+    audiences: "The platform owns the bits. You own the inception.",
     description:
-      `The workstation where you finally own your day. We’ve collapsed the friction of the old internet into a
-single, hardware-locked operating environment.`,
+      "We hold the senior patent for hardware-isolated testimonial notarization. We provide the only technical standard that satisfies the legal requirement for informed consent.",
   },
   footer: {
     brand: "VELAO",
@@ -96,11 +90,19 @@ export default function Home() {
           title={landingContent.hero.title}
           subtitle={landingContent.hero.subtitle}
           description={landingContent.hero.description}
+          ctaLabel={landingContent.hero.ctaLabel}
         />
         <FeatureSection
           eyebrow={landingContent.problem.eyebrow}
           title={landingContent.problem.title}
           description={landingContent.problem.description}
+          reverse
+        />
+        <FeatureSection
+          eyebrow={landingContent.interlock.eyebrow}
+          title={landingContent.interlock.title}
+          description={landingContent.interlock.description}
+          imageSrc="/images/lockgradient.png"
         />
         <ContentSection
           title={landingContent.evolution.title}

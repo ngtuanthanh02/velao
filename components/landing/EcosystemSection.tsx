@@ -71,9 +71,32 @@ export function EcosystemSection({
                 className="object-cover opacity-95 saturate-125"
                 sizes="(max-width: 1024px) 80vw, 360px"
               />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06050f] via-black/10 to-transparent" />
-              <div className="absolute inset-0 [mask-image:linear-gradient(to_top,transparent_10%,black_40%,black_80%)] bg-gradient-to-tr from-violet-400/20 via-transparent to-blue-400/10" />
+              <div
+                className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.22),rgba(0,0,0,0.08))]"
+                style={{
+                  WebkitMaskImage: "url(/images/lock.png)",
+                  maskImage: "url(/images/lock.png)",
+                  WebkitMaskSize: "cover",
+                  maskSize: "cover",
+                  WebkitMaskPosition: "center",
+                  maskPosition: "center",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                }}
+              />
+              <div
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06050f] via-black/25 to-transparent"
+                style={{
+                  WebkitMaskImage: "url(/images/lock.png)",
+                  maskImage: "url(/images/lock.png)",
+                  WebkitMaskSize: "cover",
+                  maskSize: "cover",
+                  WebkitMaskPosition: "center",
+                  maskPosition: "center",
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                }}
+              />
             </div>
           </div>
         </Reveal>

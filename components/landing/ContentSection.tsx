@@ -39,7 +39,7 @@ export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
             const isImageRight = index === 1;
 
             return (
-              <Reveal key={step.name} delayClassName={index === 0 ? "delay-100" : "delay-150"}>
+              <Reveal key={`${step.name}-${index}`} delayClassName={index === 0 ? "delay-100" : "delay-150"}>
                 <div className="grid items-center gap-6 lg:grid-cols-12">
                   <div className={`lg:col-span-4 ${isImageRight ? "lg:order-2" : "lg:order-1"}`}>
                     {isStep1 ? (
@@ -67,19 +67,48 @@ export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
                           className="object-cover"
                           sizes="(max-width: 1024px) 90vw, 380px"
                         />
-                        <div className="pointer-events-none absolute inset-0 bg-black/40" />
+                        <div
+                          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(0,0,0,0.22),rgba(0,0,0,0.08))]"
+                          style={{
+                            WebkitMaskImage: `url(${media})`,
+                            maskImage: `url(${media})`,
+                            WebkitMaskSize: "cover",
+                            maskSize: "cover",
+                            WebkitMaskPosition: "center",
+                            maskPosition: "center",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskRepeat: "no-repeat",
+                          }}
+                        />
+                        <div
+                          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06050f] via-black/25 to-transparent"
+                          style={{
+                            WebkitMaskImage: `url(${media})`,
+                            maskImage: `url(${media})`,
+                            WebkitMaskSize: "cover",
+                            maskSize: "cover",
+                            WebkitMaskPosition: "center",
+                            maskPosition: "center",
+                            WebkitMaskRepeat: "no-repeat",
+                            maskRepeat: "no-repeat",
+                          }}
+                        />
                       </div>
                     )}
                   </div>
 
                   <article className={`space-y-2 lg:col-span-8 ${isImageRight ? "lg:order-1" : "lg:order-2"}`}>
-                    <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-                      {step.name}
-                    </h3>
-                    <p className="text-sm font-semibold text-blue-200/90 sm:text-base">
-                      {step.status}
-                    </p>
-                    <p className="text-base leading-relaxed font-light text-white/75 sm:text-lg">
+                    {step.name ? (
+                      <h3 className="text-base leading-relaxed font-semibold tracking-tight text-white sm:text-lg">
+                        {step.name}
+                      </h3>
+                    ) : null}
+                    {step.status && step.status !== step.name ? (
+                      <p className="text-base leading-relaxed font-semibold text-white/80 sm:text-lg">
+                        {step.status}
+                      </p>
+                    ) : null}
+                    <p className="whitespace-pre-line text-base leading-relaxed font-light text-white/75 sm:text-lg">
                       {step.body}
                     </p>
 
