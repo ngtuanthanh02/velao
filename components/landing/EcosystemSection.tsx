@@ -48,7 +48,7 @@ export function EcosystemSection({
           </Reveal>
         </div>
         <Reveal className="lg:col-span-5 w-full">
-          <div className="relative h-[320px] w-full overflow-hidden rounded-3xl bg-black/20 shadow-[0_30px_120px_rgba(0,0,0,0.62)]">
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-black/20 shadow-[0_30px_120px_rgba(0,0,0,0.62)]">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.35),transparent_55%),radial-gradient(circle_at_75%_75%,rgba(56,189,248,0.25),transparent_55%)]" />
             <div className="absolute -inset-10 bg-violet-500/10 blur-3xl opacity-70" />
 

@@ -43,7 +43,7 @@ export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
                 <div className="grid items-center gap-6 lg:grid-cols-12">
                   <div className={`lg:col-span-4 ${isImageRight ? "lg:order-2" : "lg:order-1"}`}>
                     {isStep1 ? (
-                      <div className="relative mx-auto aspect-[9/16] w-full max-w-[220px] overflow-hidden rounded-[1.4rem] border border-white/15 bg-black/40">
+                      <div className="relative mx-auto aspect-[9/16] w-full max-w-[220px] overflow-hidden rounded-[1.4rem] bg-black/40">
                         <video
                           className="h-full w-full object-cover"
                           autoPlay
@@ -56,9 +56,10 @@ export function ContentSection({ title, steps, bullets }: ContentSectionProps) {
                           <source src={step1VideoSrc} type="video/mp4" />
                         </video>
                         <div className="pointer-events-none absolute inset-0 bg-black/40" />
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#06050f] via-black/10 to-transparent" />
                       </div>
                     ) : (
-                      <div className="relative mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-2xl border border-white/12">
+                      <div className="relative mx-auto aspect-square w-full max-w-[300px] overflow-hidden rounded-2xl">
                         <Image
                           src={media}
                           alt=""

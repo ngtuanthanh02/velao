@@ -44,7 +44,7 @@ export function CTASection({
         </div>
 
         <Reveal className="lg:col-span-5 lg:col-start-1 lg:row-start-1 w-full">
-          <div className="group relative h-[320px] w-full overflow-hidden rounded-3xl bg-black/20 shadow-[0_35px_140px_rgba(0,0,0,0.65)]">
+          <div className="group relative aspect-square w-full overflow-hidden rounded-3xl bg-black/20 shadow-[0_35px_140px_rgba(0,0,0,0.65)]">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(168,85,247,0.35),transparent_55%),radial-gradient(circle_at_70%_70%,rgba(56,189,248,0.25),transparent_58%)]" />
             <div className="absolute -inset-10 bg-blue-500/10 blur-3xl opacity-70 transition-opacity duration-500 group-hover:opacity-100" />
 
