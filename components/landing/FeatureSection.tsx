@@ -38,7 +38,7 @@ export function FeatureSection({
           </Reveal>
         </div>
         <Reveal className="lg:col-span-5 w-full">
-          <div className="group relative h-[280px] w-full overflow-hidden rounded-3xl bg-black/20">
+          <div className="group relative aspect-square w-full overflow-hidden rounded-3xl bg-black/20">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(99,102,241,0.35),transparent_55%),radial-gradient(circle_at_70%_75%,rgba(56,189,248,0.28),transparent_55%)] opacity-80" />
             <div className="absolute -inset-8 bg-violet-500/15 blur-3xl transition-opacity duration-500 opacity-60 group-hover:opacity-100" />
 
