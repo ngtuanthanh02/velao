@@ -1,7 +1,4 @@
-import { CTASection } from "@/components/landing/CTASection";
-import { ContentSection } from "@/components/landing/ContentSection";
 import { ContactSection } from "@/components/landing/ContactSection";
-import { EcosystemSection } from "@/components/landing/EcosystemSection";
 import { FeatureSection } from "@/components/landing/FeatureSection";
 import { Footer } from "@/components/landing/Footer";
 import { Header } from "@/components/landing/Header";
@@ -11,71 +8,77 @@ const landingContent = {
   brand: "Velao",
   hero: {
     title: "Identity, anchored in silicon.",
-    subtitle: "Standard AI is a guess. Velao is a fact.",
+    subtitle: "Standard AI is a guess. We are the proof.",
     description:
-      "We utilize the physical security already in your device to notarize every act of intent. We move from software permissions to hardware finality.",
+      "We use the security chip in your pocket to notarize human intent. No more wondering what is real.",
     ctaLabel: "REQUEST ACCESS TO THE SPECIFICATION",
-  },
-  problem: {
-    eyebrow: "THE PROBLEM",
-    title: "You are a guest on your own device.",
-    description:
-      `Right now your identity and your capital are managed by soft permissions. Platforms can spoof your face and siphon your revenue because they own the environment you work in.
-The platform owns the code. They should not own your intent.`,
-  },
-  interlock: {
-    eyebrow: "THE INTERLOCK",
-    title: "The physics of the handshake.",
-    description:
-      `The progress made with IronClaw is a landmark in technical integrity. It provides the secure ground where world class intelligence becomes private and verifiable.
-We provide the final interlock. We utilize the physics of the handshake to anchor that world class environment to the human root. By connecting their secure ground to the silicon already in your pocket, we ensure that machine labor remains physically subordinate to your command.`,
-  },
-  evolution: {
-    title: "THE EVOLUTION",
-    steps: [
-      {
-        name: "2026: AUTHORIZED ATTENTION IS ALL YOU NEED.",
-        status: "2026: AUTHORIZED ATTENTION IS ALL YOU NEED.",
-        body: `In 2017 Illia Polosukhin gave machines a mind. The architecture of attention changed the world and provided the foundation for everything we see today.`,
-      },
-      {
-        name: "IronClaw provides the ground. It is the industrial space where intelligence becomes private and verifiable.",
-        status: "IronClaw provides the ground. It is the industrial space where intelligence becomes private and verifiable.",
-        body: `We provide the key. We anchor the mind and the ground to the physical authority of the human root. This ensures every act of the machine is a verified expression of your will.`,
-      },
-      {
-        name: "",
-        status: "",
-        body: `Mind. Foundational intelligence.
-Ground. The IronClaw environment.
-Key. Your physical device.`,
-      },
-    ],
-    bullets: [],
-  },
-  ecosystem: {
-    title: "THE ECONOMY",
-    subtitle: "The many hands of authority.",
-    description:
-      `We have moved AI from chat to labor. Our environment allows the most advanced intelligence on earth to work as a verified fiduciary for the human subject.`,
-    points: [
-      `Integrity by Default. We verify the action at the source. The machine becomes physically incapable of deviating from your intent.`,
-      `Zero-Waste Performance. We have removed the middleman from the machine. No more delays. Just direct and instant execution.`,
-      `A Fair Marketplace. A new model for the professional class where every act of labor is recognized and rewarded by the ledger.`,
-    ],
-  },
-  workstation: {
-    title: "THE LEGAL ANCHOR",
-    subtitle: "Senior Priority | Est. Jan 16, 2026",
-    audiences: "The platform owns the bits. You own the inception.",
-    description:
-      "We hold the senior patent for hardware-isolated testimonial notarization. We provide the only technical standard that satisfies the legal requirement for informed consent.",
   },
   footer: {
     brand: "VELAO",
     location: "Los Angeles | Kharkiv",
   },
 };
+
+type FeatureBlock = {
+  id: string;
+  eyebrow?: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  audiences?: string;
+  imageSrc?: string;
+  videoSrc?: string;
+  videoPoster?: string;
+};
+
+const featureSections: FeatureBlock[] = [
+  {
+    id: "tenant-problem",
+    // eyebrow: "The tenant problem.",
+    title: "The tenant problem",
+      description:
+        `ou are a guest on your own device. Your identity and your capital are managed by soft permissions. Platforms own the environment, so they think they own you.
+The platform owns the bits. You should own the intent.`,
+    imageSrc: "/images/homegradient.png",
+  },
+  {
+    id: "interlock",
+    // eyebrow: "THE INTERLOCK",
+    title: "The physics of the handshake.",
+    description:
+      `The progress made with IronClaw is a landmark in technical integrity. It provides the secure ground where intelligence becomes private and verifiable.
+We provide the key. We use the physics of a hardware handshake to link that ground to the human root. We ensure the machine stays subordinate to the person.`,
+    imageSrc: "/images/handshake.png",
+  },
+  {
+    id: "end-of-the-ghost",
+    title: "The end of the ghost.",
+    description:
+      `The web is full of anonymous replicas without a source. We provide the standard for neural integrity.
+By notarizing your face and your voice at the sensor, we create a safe harbor for your identity. If your phone didn't sign it, the world knows it isn't you.`,
+    videoSrc: "/videos/KarolVideo.mov",
+    videoPoster: "/images/girl.png",
+  },
+  {
+    id: "authorized-attention",
+    title: "2026: Authorized Attention is all you need.",
+    description:
+      `In 2017, Illia Polosukhin gave machines a mind. Today, IronClaw gives that mind a body.
+We provide the authority of the human root.
+Mind. Foundational intelligence.
+Ground. The IronClaw environment.
+Key. Your physical device.`,
+    imageSrc: "/images/lockgradient2.png",
+  },
+  {
+    id: "law",
+    title: "The Law | Est. Jan 16, 2026",
+    description:
+      `We hold the senior patent for hardware isolated testimonial notarization. We provide the only technical standard that satisfies the legal requirement for informed consent.
+The platform owns the bits. You own the inception.`,
+    imageSrc: "/images/octopus-gradient.png",
+  },
+];
 
 export default function Home() {
   return (
@@ -92,35 +95,21 @@ export default function Home() {
           description={landingContent.hero.description}
           ctaLabel={landingContent.hero.ctaLabel}
         />
-        <FeatureSection
-          eyebrow={landingContent.problem.eyebrow}
-          title={landingContent.problem.title}
-          description={landingContent.problem.description}
-          reverse
-        />
-        <FeatureSection
-          eyebrow={landingContent.interlock.eyebrow}
-          title={landingContent.interlock.title}
-          description={landingContent.interlock.description}
-          imageSrc="/images/lockgradient.png"
-        />
-        <ContentSection
-          title={landingContent.evolution.title}
-          steps={landingContent.evolution.steps}
-          bullets={landingContent.evolution.bullets}
-        />
-        <EcosystemSection
-          title={landingContent.ecosystem.title}
-          subtitle={landingContent.ecosystem.subtitle}
-          description={landingContent.ecosystem.description}
-          points={landingContent.ecosystem.points}
-        />
-        <CTASection
-          title={landingContent.workstation.title}
-          subtitle={landingContent.workstation.subtitle}
-          audiences={landingContent.workstation.audiences}
-          description={landingContent.workstation.description}
-        />
+        {featureSections.map((section, index) => (
+          <FeatureSection
+            key={section.id}
+            id={section.id}
+            eyebrow={section.eyebrow}
+            title={section.title}
+            subtitle={section.subtitle}
+            description={section.description}
+            audiences={section.audiences}
+            imageSrc={section.imageSrc}
+            videoSrc={section.videoSrc}
+            videoPoster={section.videoPoster}
+            reverse={index % 2 === 0}
+          />
+        ))}
 
         <ContactSection />
       </main>
