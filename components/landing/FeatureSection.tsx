@@ -7,7 +7,7 @@ type FeatureSectionProps = {
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  description: string;
+  description: string[];
   audiences?: string;
   reverse?: boolean;
   /** Dùng khi không phát video */
@@ -37,16 +37,16 @@ export function FeatureSection({
       className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-16"
     >
       <div className="relative grid max-w-6xl items-center gap-8 lg:grid-cols-12">
-        <div className={`space-y-6 lg:col-span-7 ${reverse ? "lg:order-2" : "lg:order-1"}`}>
+        <div className={`lg:col-span-7 ${reverse ? "lg:order-2" : "lg:order-1"}`}>
           {eyebrow && (
             <Reveal>
-              <p className="text-xs font-semibold tracking-[0.2em] text-blue-200/85 uppercase">
+              <p className="text-xs font-semibold tracking-[0.2em] text-blue-200/85 uppercase mb-4">
                 {eyebrow}
               </p>
             </Reveal>
           )}
           <Reveal delayClassName="delay-100">
-            <h2 className="text-3xl leading-tight font-bold tracking-tight text-white sm:text-5xl">
+            <h2 className="text-3xl leading-tight font-bold tracking-tight text-white sm:text-5xl mb-4">
               {title}
             </h2>
           </Reveal>
@@ -56,13 +56,15 @@ export function FeatureSection({
             </Reveal>
           ) : null}
           <Reveal delayClassName="delay-200">
-            <p className="max-w-4xl whitespace-pre-line text-base leading-relaxed font-light text-white/70 sm:text-lg">
-              {description}
-            </p>
+            <div className="flex max-w-4xl flex-col gap-4 text-base leading-relaxed font-light text-white/70 sm:text-lg">
+              {description.map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </Reveal>
           {audiences ? (
             <Reveal delayClassName="delay-250">
-              <p className="inline-flex text-sm font-normal tracking-[0.18em] text-blue-100/90 uppercase sm:text-base">
+              <p className="inline-flex text-sm font-normal tracking-[0.18em] text-blue-100/90 uppercase sm:text-base mt-8">
                 {audiences}
               </p>
             </Reveal>

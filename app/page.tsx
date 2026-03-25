@@ -24,7 +24,7 @@ type FeatureBlock = {
   eyebrow?: string;
   title: string;
   subtitle?: string;
-  description: string;
+  description: string[];
   audiences?: string;
   imageSrc?: string;
   videoSrc?: string;
@@ -36,46 +36,51 @@ const featureSections: FeatureBlock[] = [
     id: "tenant-problem",
     // eyebrow: "The tenant problem.",
     title: "The tenant problem",
-      description:
-        `ou are a guest on your own device. Your identity and your capital are managed by soft permissions. Platforms own the environment, so they think they own you.
-The platform owns the bits. You should own the intent.`,
+    description: [
+      "You are a guest on your own device. Your identity and your capital are managed by soft permissions. Platforms own the environment, so they think they own you.",
+      "The platform owns the bits. You should own the intent.",
+    ],
     imageSrc: "/images/homegradient.png",
   },
   {
     id: "interlock",
     // eyebrow: "THE INTERLOCK",
     title: "The physics of the handshake.",
-    description:
-      `The progress made with IronClaw is a landmark in technical integrity. It provides the secure ground where intelligence becomes private and verifiable.
-We provide the key. We use the physics of a hardware handshake to link that ground to the human root. We ensure the machine stays subordinate to the person.`,
+    description: [
+      "The progress made with IronClaw is a landmark in technical integrity. It provides the secure ground where intelligence becomes private and verifiable.",
+      "We provide the key. We use the physics of a hardware handshake to link that ground to the human root. We ensure the machine stays subordinate to the person.",
+    ],
     imageSrc: "/images/handshake.png",
   },
   {
     id: "end-of-the-ghost",
     title: "The end of the ghost.",
-    description:
-      `The web is full of anonymous replicas without a source. We provide the standard for neural integrity.
-By notarizing your face and your voice at the sensor, we create a safe harbor for your identity. If your phone didn't sign it, the world knows it isn't you.`,
+    description: [
+      "The web is full of anonymous replicas without a source. We provide the standard for neural integrity.",
+      "By notarizing your face and your voice at the sensor, we create a safe harbor for your identity. If your phone didn't sign it, the world knows it isn't you.",
+    ],
     videoSrc: "/videos/KarolVideo.mov",
     videoPoster: "/images/girl.png",
   },
   {
     id: "authorized-attention",
     title: "2026: Authorized Attention is all you need.",
-    description:
-      `In 2017, Illia Polosukhin gave machines a mind. Today, IronClaw gives that mind a body.
-We provide the authority of the human root.
-Mind. Foundational intelligence.
-Ground. The IronClaw environment.
-Key. Your physical device.`,
+    description: [
+      "In 2017, Illia Polosukhin gave machines a mind. Today, IronClaw gives that mind a body.",
+      "We provide the authority of the human root.",
+      "Mind. Foundational intelligence.",
+      "Ground. The IronClaw environment.",
+      "Key. Your physical device.",
+    ],
     imageSrc: "/images/lockgradient2.png",
   },
   {
     id: "law",
     title: "The Law | Est. Jan 16, 2026",
-    description:
-      `We hold the senior patent for hardware isolated testimonial notarization. We provide the only technical standard that satisfies the legal requirement for informed consent.
-The platform owns the bits. You own the inception.`,
+    description: [
+      "We hold the senior patent for hardware isolated testimonial notarization. We provide the only technical standard that satisfies the legal requirement for informed consent.",
+      "The platform owns the bits. You own the inception.",
+    ],
     imageSrc: "/images/octopus-gradient.png",
   },
 ];
