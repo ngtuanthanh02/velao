@@ -14,7 +14,7 @@ export function HeroSection({ title, subtitle, description, ctaLabel = "Inquire"
   return (
     <section
       id="hero"
-      className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-10 sm:py-20 sm:pt-24 lg:px-16 lg:py-24 lg:pt-28"
+      className="scroll-mt-20 mx-auto w-full max-w-7xl px-6 py-12 sm:px-10 sm:py-20 sm:pt-24 lg:px-16 lg:py-24 lg:pt-28"
     >
       <div className="grid items-center gap-10 lg:grid-cols-12">
         <div className="lg:col-span-7">

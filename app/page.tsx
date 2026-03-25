@@ -38,7 +38,7 @@ const featureSections: FeatureBlock[] = [
     title: "The tenant problem",
     description: [
       "You are a guest on your own device. Your identity and your capital are managed by soft permissions. Platforms own the environment, so they think they own you.",
-      "The platform owns the bits. You should own the intent.",
+      "They own the property. You own the deed.",
     ],
     imageSrc: "/images/homegradient.png",
   },

@@ -2,6 +2,19 @@ import Image from "next/image";
 
 import { Reveal } from "@/components/landing/Reveal";
 
+/** Bold labels Mind. / Ground. / Key. at line start (authorized-attention copy). */
+function DescriptionParagraph({ text }: { text: string }) {
+  const match = text.match(/^(Mind|Ground|Key)\.\s*(.*)$/);
+  if (match) {
+    return (
+      <p>
+        <strong className="font-semibold text-white/90">{match[1]}.</strong> {match[2]}
+      </p>
+    );
+  }
+  return <p>{text}</p>;
+}
+
 type FeatureSectionProps = {
   id?: string;
   eyebrow?: string;
@@ -34,7 +47,7 @@ export function FeatureSection({
   return (
     <section
       id={id}
-      className="mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-16"
+      className="scroll-mt-20 mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-16"
     >
       <div className="relative grid max-w-6xl items-center gap-8 lg:grid-cols-12">
         <div className={`lg:col-span-7 ${reverse ? "lg:order-2" : "lg:order-1"}`}>
@@ -58,7 +71,7 @@ export function FeatureSection({
           <Reveal delayClassName="delay-200">
             <div className="flex max-w-4xl flex-col gap-4 text-base leading-relaxed font-light text-white/70 sm:text-lg">
               {description.map((paragraph, i) => (
-                <p key={i}>{paragraph}</p>
+                <DescriptionParagraph key={i} text={paragraph} />
               ))}
             </div>
           </Reveal>

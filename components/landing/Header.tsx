@@ -8,30 +8,35 @@ type HeaderProps = {
   brand: string;
 };
 
+/** Khớp `id` trên trang chủ: Hero + các FeatureSection + Contact */
+const navItems = [
+  { label: "HOME", href: "#hero" },
+  { label: "TENANT", href: "#tenant-problem" },
+  { label: "INTERLOCK", href: "#interlock" },
+  { label: "GHOST", href: "#end-of-the-ghost" },
+  { label: "ATTENTION", href: "#authorized-attention" },
+  { label: "LAW", href: "#law" },
+  { label: "CONTACT", href: "#contact" },
+] as const;
+
 export function Header({ brand }: HeaderProps) {
   const scrollToSection = (href: string) => (event: MouseEvent<HTMLAnchorElement>) => {
     event.preventDefault();
+    event.stopPropagation();
 
     const targetId = href.replace("#", "");
     const element = document.getElementById(targetId);
     if (!element) return;
 
-    const headerOffset = 80;
-    const y = element.getBoundingClientRect().top + window.scrollY - headerOffset;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
+    requestAnimationFrame(() => {
+      element.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
     });
   };
-
-  const navItems = [
-    { label: "PROBLEM", href: "#problem" },
-    { label: "EVOLUTION OF CERTAINTY", href: "#evolution" },
-    { label: "ECOSYSTEM", href: "#ecosystem" },
-    { label: "WORKSTATION", href: "#workstation" },
-    { label: "CONTACT", href: "#contact" },
-  ];
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 h-[80px] border-b border-white/10 bg-[#070611]/70 backdrop-blur-xl">
@@ -55,7 +60,7 @@ export function Header({ brand }: HeaderProps) {
             ) : null}
           </Link>
 
-          <nav className="hidden min-w-0 items-center gap-8 lg:flex">
+          <nav className="hidden min-w-0 flex-wrap items-center justify-end gap-x-6 gap-y-2 lg:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}

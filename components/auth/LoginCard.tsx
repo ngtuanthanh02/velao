@@ -125,10 +125,10 @@ export function LoginCard() {
 
           <button
             type="submit"
-            className="relative h-12 w-full cursor-pointer overflow-hidden rounded-2xl bg-gradient-to-r from-violet-400 via-fuchsia-300 to-blue-400 font-semibold tracking-[0.06em] text-black/90 transition-opacity hover:opacity-95"
+            className="relative mt-4 h-12 w-full cursor-pointer overflow-hidden rounded-2xl bg-white font-semibold tracking-[0.06em] text-black/90 transition-opacity hover:opacity-95"
           >
             <span className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,transparent_0%,rgba(255,255,255,0.35)_40%,transparent_70%)] opacity-60" />
-            <span className="relative">login</span>
+            <span className="relative">Login</span>
           </button>
         </form>
       </Reveal>

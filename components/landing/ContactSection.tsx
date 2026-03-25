@@ -51,7 +51,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="scroll-mt-24 mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24"
+      className="scroll-mt-20 mx-auto w-full max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 lg:py-24"
     >
       <div className="relative max-w-6xl">
         <div className="pointer-events-none absolute -left-24 top-10 h-64 w-64 rounded-full bg-violet-500/20 blur-3xl" />
